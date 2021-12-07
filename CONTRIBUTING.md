@@ -1,87 +1,42 @@
-# How to contribute to fastai
+# Fastai에 기여하는 방법
 
-First, thanks a lot for wanting to help! Make sure you have read the [doc on code style](
-https://docs.fast.ai/dev/style.html) first. (Note that we don't follow PEP8, but instead follow a coding style designed specifically for numerical and interactive programming.) For help running and building the code, see the [developers guide](https://docs.fast.ai/dev/develop.html).
+먼저 도와줘서 정말 고마워! [code style에 대한 문서]를 읽어보았는지 확인합니다(
+https://docs.fast.ai/dev/style.html) 먼저 (우리는 PEP8을 따르지 않고, 대신 수치 및 대화형 프로그래밍을 위해 특별히 설계된 코딩 스타일을 따릅니다.) 코드 실행 및 구축에 대한 도움말은 [개발자 안내서](https://docs.fast.ai/dev/develop.html)를 참조하십시오.
 
-## Note for new contributors from Jeremy
+## Jeremy의 새로운 기여자에 대한 참고 사항
 
-It can be tempting to jump into a new project by questioning the stylistic decisions that have been made, such as naming, formatting, and so forth. This can be especially so for python programmers contributing to this project, which is unusual in following a number of conventions that are common in other programming communities, but not in Python. However, please don’t do this, for (amongst others) the following reasons:
+이름 지정, 서식 지정 등과 같은 스타일 결정에 의문을 제기함으로써 새 프로젝트에 뛰어들고 싶은 유혹이 생길 수 있습니다. 이것은 특히 이 프로젝트에 기여하는 파이썬 프로그래머들에게 해당될 수 있는데, 파이썬에서는 아니지만 다른 프로그래밍 커뮤니티에서 공통적으로 볼 수 있는 수많은 규약을 따르는 것은 이례적이다. 그러나 다음과 같은 이유로 이 작업을 수행하지 마십시오.
 
-- Contributing to [Parkinson’s law of triviality](https://www.wikiwand.com/en/Law_of_triviality) has negative consequences for a project. Let’s focus on deep learning!
-- It’s exhausting to repeat the same discussion over and over again, especially when it’s been well documented already. When you have a question about the project, please check the pages in the docs website linked here.
-- You’re likely to get a warmer welcome from the community if you start out by contributing something that’s been requested on the forum, since you’ll be solving someone’s current problem.
-- If you start out by just telling us your point of view, rather than studying the background behind the decisions that have been made, you’re unlikely to be contributing anything new or useful.
-- I’ve been writing code for nearly 40 years now, across dozens of languages, and other folks involved have quite a bit of experience too - the approaches used are based on significant experience and research. Whilst there’s always room for improvement, it’s much more likely you’ll be making a positive contribution if you spend a few weeks studying and working within the current framework before suggesting wholesale changes.
+- [Parkinson의 사소한 법칙](https://www)에 기여합니다.wikiwand.com/en/Law_of_triviality)은 프로젝트에 부정적인 영향을 미칩니다. 딥 러닝에 집중합시다!
+- 같은 논의를 계속 반복하는 것은 피곤한 일인데, 특히 이미 잘 문서화된 상황에서 더욱 그렇습니다. 프로젝트에 대한 질문이 있을 때, 여기 링크된 문서 웹사이트의 페이지를 확인하세요.
+- 여러분이 포럼에서 요청받은 것을 기여하는 것으로 시작한다면, 여러분이 누군가의 현재 문제를 해결하게 될 것이기 때문에 지역 사회로부터 더 따뜻한 환영을 받을 가능성이 있습니다.
+- 여러분이 내린 결정의 배경을 연구하기 보다는 여러분의 관점을 우리에게 말하는 것으로 시작한다면, 여러분은 새로운 것 또는 유용한 것에 기여하고 있을 가능성이 거의 없습니다.
+- 저는 지금까지 거의 40년 동안 수십 개의 언어를 넘나들며 코드를 작성해왔고, 다른 관련자들도 상당한 경험을 가지고 있습니다. 이 접근법은 상당한 경험과 연구를 기반으로 합니다. 항상 개선의 여지가 있지만, 대대적인 변화를 제안하기 전에 몇 주 동안 현재의 틀 안에서 공부하고 작업한다면 긍정적인 기여를 할 가능성이 훨씬 더 높습니다.
 
-## How to get started
+## 시작하는 방법
 
-Here are some ways that you can learn a lot about the library, whilst also contributing to the community:
+다음은 커뮤니티에 기여하면서 라이브러리에 대해 많은 것을 배울 수 있는 몇 가지 방법입니다.
 
-- Pick a class, function, or method and write tests for it. For instance, here are the tests for [fastai.core](https://github.com/fastai/fastai1/blob/master/tests/test_core.py). Adding tests for anything without good test coverage is a great way to really understand that part of the library deeply, and have in-depth conversations with the dev team about the reasoning behind decisions in the code.
-- Document something that is currently undocumented. You can find them by looking for the “new methods” section in any doc notebook. Here’s a [search](https://github.com/fastai/fastai/search?q=%22new+methods%22&unscoped_q=%22new+methods%22) that lists them
-- Add an example of use to the docs for something that doesn’t currently have an example of use. We’d like everything soon in the docs to include an actual piece of working code demonstrating it. Currently, we’ve largely only provided working examples for stuff higher up the abstraction ladder.
+- 클래스, 함수 또는 방법을 선택하고 그에 대한 테스트를 작성합니다. 예를 들어, 다음은 [fastai.core](https://github.com/fastai/fastai1/blob/master/tests/test_core.py)에 대한 테스트입니다. 적절한 테스트 범위 없이 테스트를 추가하는 것은 라이브러리의 해당 부분을 정말로 깊이 이해하고 개발 팀과 코드의 결정 이면에 있는 추론에 대해 깊이 있는 대화를 나눌 수 있는 좋은 방법입니다.
+- 현재 문서화되지 않은 것을 문서화합니다. 문서 노트북에서 "새 메서드" 섹션을 검색하면 찾을 수 있습니다. 여기 [검색](https://github.com/fastai/fastai/search?이러한 항목을 나열하는 q=%22new+contoped_q=%22new+contoped%22)
+- 현재 사용 예가 없는 항목에 대한 사용 예를 문서에 추가합니다. 우리는 곧 문서의 모든 내용에 그것을 증명하는 실제 작동 코드를 포함시키기를 원합니다. 현재, 우리는 추상화 사다리를 더 높은 곳에 있는 것들에 대한 작업 사례만 주로 제공했습니다.
 
-## Did you find a bug?
+## 벌레를 찾았나요?
 
-* Nobody is perfect, especially not us. But first, please double-check the bug doesn't come from something on your side. The [forum](http://forums.fast.ai/) is a tremendous source for help, and we'd advise to use it as a first step. Be sure to include as much code as you can so that other people can easily help you.
-* Then, ensure the bug was not already reported by searching on GitHub under [Issues](https://github.com/fastai/fastai/issues).
-* If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/fastai/fastai/issues/new). Be sure to include a title and clear description, as much relevant information as possible, and a code sample or an executable test case demonstrating the expected behavior that is not occurring.
-* Be sure to add the complete error messages as well as the result of the line `import fastai.utils.collect_env; fastai.utils.collect_env.show_install(1)`.
+* 아무도 완벽하지 않아요, 특히 우리는요. 하지만 우선 버그가 당신 쪽에서 온 것이 아닌지 다시 한번 확인해주세요. [https](http://forums.fast.ai/)은 엄청난 도움의 원천이므로 첫 번째 단계로 사용하는 것이 좋습니다. 다른 사람들이 당신을 쉽게 도와줄 수 있도록 당신이 할 수 있는 한 많은 코드를 포함하도록 하세요.
+* 그런 다음 [이슈](https://github.com/fastai/fastai/issues)) 아래의 GitHub에서 검색하여 버그가 이미 보고되지 않았는지 확인합니다.
+* 문제를 해결하는 미결 문제를 찾을 수 없는 경우 [새 문제 열기](https://github.com/fastai/fastai/issues/new)를 참조하십시오. 제목과 명확한 설명, 가능한 한 많은 관련 정보, 그리고 일어나지 않는 예상 동작을 보여주는 코드 샘플 또는 실행 가능한 테스트 사례를 포함해야 합니다.
+* 전체 오류 메시지와 'import fastai.utils.collect_env; fastai.utils.collect_env.show_install(1)' 행의 결과를 추가해야 합니다.
 
-#### Did you write a patch that fixes a bug?
+#### 당신은 버그를 고치는 패치를 작성했나요?
 
-* Open a new GitHub pull request with the patch.
-* Ensure that your PR includes tests that fail without your patch, and pass with it.
-* Ensure the PR description clearly describes the problem and solution. Include the relevant issue number if applicable.
-* Before submitting, please be sure you abide by our [coding style](https://docs.fast.ai/dev/style.html) and [the guide on abbreviations](https://docs.fast.ai/dev/abbr.html) and clean-up your code accordingly.
+* 패치를 사용하여 새 GitHub 풀 요청을 엽니다.
+* 패치가 없으면 통과하지 못하는 테스트가 PR에 포함되어 있는지 확인하십시오.
+* PR 설명에 문제 및 해결 방법이 명확히 설명되어 있는지 확인합니다. 해당되는 경우 관련 발행 번호를 포함합니다.
+* 제출하기 전에 당사의 [control style](https://docs.fast.ai/dev/abbr.html) 및 [약어 가이드](https://docs.fast.ai/dev/abbr.html))를 준수하고 코드를 정리하십시오.
 
-## Do you intend to add a new feature or change an existing one?
+## 새 기능을 추가하거나 기존 기능을 변경할 예정입니까?
 
-**Please take note that we are in the midst of making several breaking changes with the preparation of v1.1 so we suggest you wait a little bit before starting coding it.**
+**v1.1을 준비하면서 몇 가지 변경 사항이 있으므로 잠시 기다렸다가 코딩을 시작하는 것이 좋습니다.**
 
-* You can suggest your change on the [fastai forum](http://forums.fast.ai/) to see if others are interested or want to help. [This topic](http://forums.fast.ai/t/fastai-v1-adding-features/23041/8) lists the features that will be added to fastai in the foreseeable future. Be sure to read it too!
-* Before implementing a non-trivial new feature, first create a notebook version of your new feature, like those in [dev_nb](https://github.com/fastai/fastai_docs/tree/master/dev_nb). It should show step-by-step what your code is doing, and why, with the result of each step. Try to simplify the code as much as possible. When you're happy with it, let us know on the forum (include a link to gist with your notebook.)
-* Once your approach has been discussed and confirmed on the forum, you are welcome to push a PR, including a complete description of the new feature and an example of how it's used. Be sure to document your code and read the [doc on code style](https://docs.fast.ai/dev/style.html) and [the one on abbreviations](https://docs.fast.ai/dev/abbr.html).
-* Ensure that your PR includes tests that exercise not only your feature, but also any other code that might be impacted. Currently we have poor test coverage of existing features, so often you'll need to add tests of existing code. Your help here is much appreciated!
-
-## How to submit notebook PRs?
-
-Please run [`nbdev_install_git_hooks`](https://nbdev.fast.ai/cli#nbdev_install_git_hooks) in your terminal after cloning the repository. This sets up git hooks, which clean up the notebooks to remove the extraneous stuff stored in the notebooks (e.g. which cells you ran) which causes unnecessary merge conflicts.
-
-Before submitting a PR, check that the local library and notebooks match. The script [`nbdev_diff_nbs`](https://nbdev.fast.ai/sync#nbdev_diff_nbs) can let you know if there is a difference between the local library and the notebooks.
-
-If you made a change to the notebooks in one of the exported cells, you can export it to the library with [`nbdev_build_lib`](https://nbdev.fast.ai/export2html#nbdev_build_lib) or `make fastai`.
-If you made a change to the library, you can export it back to the notebooks with [`nbdev_update_lib`](https://nbdev.fast.ai/sync#nbdev_update_lib).
-
-Furthermore, you can run tests in parallel by launching [`nbdev_test_nbs`](https://nbdev.fast.ai/test#nbdev_test_nbs) or `make test`
-
-
-## PR submission guidelines
-
-* Keep each PR focused. While it's more convenient, do not combine several unrelated fixes together. Create as many branches as needing to keep each PR focused.
-
-* Do not mix style changes/fixes with "functional" changes. It's very difficult to review such PRs and it most likely get rejected.
-
-* Do not add/remove vertical whitespace. Preserve the original style of the file you edit as much as you can.
-
-* Do not turn an already submitted PR into your development playground. If after you submitted PR, you discovered that more work is needed - close the PR, do the required work and then submit a new PR. Otherwise each of your commits requires attention from maintainers of the project.
-
-* If, however, you submitted a PR and received a request for changes, you should proceed with commits inside that PR, so that the maintainer can see the incremental fixes and won't need to review the whole PR again. In the exception case where you realize it'll take many many commits to complete the requests, then it's probably best to close the PR, do the work and then submit it again. Use common sense where you'd choose one way over another.
-
-
-### Code PRs
-
-* If your PR is a bug fix, please also include a test that demonstrates the problem, or modifies an existing test that wasn't catching that problem already. Of course, it's not a requirement, so proceed anyway if you can't figure out how to write a test, but do try. Without having a test your fix could be lost down the road. By supplying a test, you're ensuring that your projects won't break in the future.
-
-* Same applies for PRs that implement new features - without having a test case validating this new feature, it'd be very easy for that new feature to break in the future. A test case ensures that the feature will not break.
-
-
-## Do you have questions about the source code?
-
-* Please ask it on the [fastai forum](http://forums.fast.ai/) (after searching someone didn't ask the same one before with a quick search). We'd rather have the maximum of discussions there so that the largest number can benefit from it.
-
-## Do you want to contribute to the documentation?
-
-* Docs are automatically created from the notebooks in the `/nbs` directory.
-* To switch the `docs` submodule to ssh, `cd docs && git remote set-url origin git@github.com:fastai/fastai-docs.git`
-
+* [fastai forum](http://forums.fast.ai/)에서 변경 사항을 제안하여 다른 사용자에게 관심이 있거나 도움이 되고 싶은지 확인할 수 있습니다.
